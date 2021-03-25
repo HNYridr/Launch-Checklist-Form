@@ -1,4 +1,40 @@
-// Write your JavaScript code here!
+window.addEventListener("load", function() {
+   let form = document.querySelector("form");
+   form.addEventListner("submit", function(event) {
+      submit.preventDefault()
+      let pilotNameInput = document.getElementById("pilotName");
+      let copilotNameInput = document.getElementById("copilotName");
+      let fuelLevelInput = document.getElementById("fuelLevel");
+      let cargoMassInput = document.getElementById("cargoMass");
+      let showFault = document.getElementById("faultyItems");
+      let fuelStatusChange = document.getElementById("fuelStatus");
+      let launchStatusChange = document.getElementById("launchStatus");
+      //alert user if required fields are not filled
+      if (pilotNameInput.value === "" || copilotNameInput.value === "" || fuelLevelInput.value === "" || cargoMassInput.value === ""){
+         alert("All fields are required!")
+      }
+      //alert user if incorrect data is used for cargo mass 
+      if (isNaN(fuelLevelInput.value) || isNaN(cargoMassInput.value)){
+         alert("Fuel level and Cargo Mass MUST be numbers. do not include spaces or '.'")
+      }
+      //alert user if text only section contains other characters
+      if (pilotNameInput.value !== string || cargoMassInput.value !== string){
+         alert("name of pilot/copilot cannot inculde numbers")
+      }
+      //update launch status if fuel level is incorrect 
+      if (fuelLelevInput.value < 10000){
+         showFault.style.visibility =  "visible";
+         fuelStatusChange = "there is not enough fuel for the journey";
+         launchStatusChange = "Shuttle not ready for launch";
+         launchStatusCHange.style.color = "red";
+      }
+
+      
+   });
+ });
+
+
+
 
 /* This block of code shows how to format the HTML once you fetch some planetary JSON!
 <h2>Mission Destination</h2>
