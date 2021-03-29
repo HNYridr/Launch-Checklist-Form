@@ -29,32 +29,23 @@ window.addEventListener("load", function() {
          launchStatusCHange.style.color = "red";
       }
 
+      fetch("https://handlers.education.launchcode.org/static/weather.json").then(function(response) {
+   let planetData = response.json().then( function(json) {
+   "planetName" : "json[0].name",
+   "planetDiameter" : "json[0].diameter",
+   "planetStar" : "json[0].star",
+   "planetDistance" : "json[0].distance",
+   "planetImage" : "json[0].image",
+   "planetMoons" : "json[0].moons"
+   });
+ });
+
+
       
    });
  });
-//  jsonData = fetch("https://handlers.education.launchcode.org/static/weather.json").then(function(response) {
-//    for (i = 0; i > jsonData.length; i++){
-//       for (x = 0; x > i.length; x++){
-//       planetName = i[x].name.value;
-//       planetDiameter = i[x].diameter.value;
-//       planetStar = i[x].star.value;
-//       planetDistance = i[x].distance.value;
-//       planetImage = i[x].image.value;
-//       planetMoons = i[x].moons.value;
-//       };
-//    };
-//  });
 
-fetch("https://handlers.education.launchcode.org/static/weather.json").then(function(response) {
-   planetData = response.json().then( function(json) {
-   planetName = json[0].name;
-   planetDiameter = json[0].diameter;
-   planetStar = json[0].star;
-   planetDistance = json[0].distance;
-   planetImage = json[0].image;
-   planetMoons = json[0].moons;
-   });
- });
+
 /* This block of code shows how to format the HTML once you fetch some planetary JSON!
 <h2>Mission Destination</h2>
 <ol>
