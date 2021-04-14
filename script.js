@@ -1,7 +1,7 @@
 window.addEventListener("load", function() {
    let form = document.getElementById("launchForm");
-   form.addEventListner("submit", function(event) {
-      
+   form.addEventListener("submit", function(event) {
+      event.preventDefault();
       let pilotNameInput = document.querySelector("input[name=pilotName]");
       let copilotNameInput = document.querySelector("input[name=copilotName]");
       let fuelLevelInput = document.querySelector("input[name=fuelLevel]");
@@ -28,7 +28,7 @@ window.addEventListener("load", function() {
          launchStatusChange = "Shuttle not ready for launch";
          launchStatusChange.style.color = "red";
       }
-      event.preventDefault();
+      
       fetch("https://handlers.education.launchcode.org/static/planets.json").then(function(response) {
    response.json().then( function(json) {
      emptyArray = [];
