@@ -18,7 +18,7 @@ window.addEventListener("load", function() {
          alert("Fuel level and Cargo Mass MUST be numbers. do not include spaces or '.'");
       }
       //alert user if text only section contains other characters
-      if (pilotNameInput.value !== string || cargoMassInput.value !== string ){
+      if (pilotNameInput.value !== String || cargoMassInput.value !== String ){
          alert("name of pilot/copilot cannot inculde numbers");
       }
       //update launch status if fuel level is incorrect 
