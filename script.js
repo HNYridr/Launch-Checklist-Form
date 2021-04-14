@@ -1,7 +1,7 @@
 window.addEventListener("load", function() {
    let form = document.getElementById("launchForm");
    form.addEventListner("submit", function(event) {
-      event.preventDefault();
+      
       let pilotNameInput = document.querySelector("input[name=pilotName]");
       let copilotNameInput = document.querySelector("input[name=copilotName]");
       let fuelLevelInput = document.querySelector("input[name=fuelLevel]");
@@ -28,23 +28,13 @@ window.addEventListener("load", function() {
          launchStatusChange = "Shuttle not ready for launch";
          launchStatusChange.style.color = "red";
       }
-
+      event.preventDefault();
       fetch("https://handlers.education.launchcode.org/static/planets.json").then(function(response) {
    response.json().then( function(json) {
      emptyArray = [];
       jsonArray = emptyArray.push(json);
       const displayData = document.getElementById("missionTarget");
-      displayData.innerHTML = 
-      <h2>Mission Destination</h2> 
-      <ol>
-         <li>Name: ${"jsonArray[0].name"}</li>
-         <li>Diameter: ${"jsonArray[0].diameter"}</li>
-         <li>Star: ${"jsonArray[0].star"}</li>
-         <li>Distance from Earth: ${"jsonArray[0].distance"}</li>
-         <li>Number of Moons: ${"jsonArray[0].moons"}</li>
-      </ol>
-   <img src="${https://www.nasa.gov/sites/default/files/images/587837main_Kepler16_transit_art2_full.jpg}">
-   */</img>
+     
   
       
       
