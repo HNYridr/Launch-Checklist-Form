@@ -33,7 +33,7 @@ window.addEventListener("load", function() {
    response.json().then( function(json) {
       const displayData = document.getElementById("missionTarget");
       displayData.innerHTML = 
-      <h2>Mission Destination</h2>
+      <h2>Mission D</h2>
          <ol>
             <li>Name: ${"json[0].name"}</li>
             <li>Diameter: ${"json[0].diameter"}</li>
