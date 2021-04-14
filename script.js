@@ -1,7 +1,7 @@
 window.addEventListener("load", function() {
    let form = document.querySelector("form");
    form.addEventListner("submit", function(event) {
-      event.preventDefault();
+      event.preventDefault(event);
       let pilotNameInput = document.querySelector("input[name=pilotName]");
       let copilotNameInput = document.querySelector("input[name=copilotName]");
       let fuelLevelInput = document.querySelector("input[name=fuelLevel]");
@@ -29,14 +29,14 @@ window.addEventListener("load", function() {
          launchStatusCHange.style.color = "red";
       }
 
-      fetch("https://handlers.education.launchcode.org/static/weather.json").then(function(response) {
-   let planetData = response.json().then( function(json) {
-   "planetName" : "json[0].name",
-   "planetDiameter" : "json[0].diameter",
-   "planetStar" : "json[0].star",
-   "planetDistance" : "json[0].distance",
-   "planetImage" : "json[0].image",
-   "planetMoons" : "json[0].moons"
+      fetch("https://handlers.education.launchcode.org/static/planets.json").then(function(response) {
+   response.json().then( function(json) {
+   // "planetName" : "json[0].name",
+   // "planetDiameter" : "json[0].diameter",
+   // "planetStar" : "json[0].star",
+   // "planetDistance" : "json[0].distance",
+   // "planetImage" : "json[0].image",
+   // "planetMoons" : "json[0].moons"
    });
  });
 
