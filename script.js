@@ -31,19 +31,21 @@ window.addEventListener("load", function() {
 
       fetch("https://handlers.education.launchcode.org/static/planets.json").then(function(response) {
    response.json().then( function(json) {
-     
+     emptyArray = [];
+      jsonArray = emptyArray.push(json);
       const displayData = document.getElementById("missionTarget");
       displayData.innerHTML = 
-      <h2>Mission Destination</h2>
+      <h2>Mission Destination</h2> 
       <ol>
-         <li>Name: ${"json[0].name"}</li>
-         <li>Diameter: ${"json[0].diameter"}</li>
-         <li>Star: ${"json[0].star"}</li>
-         <li>Distance from Earth: ${"json[0].distance"}</li>
-         <li>Number of Moons: ${"json[0].moons"}</li>
+         <li>Name: ${"jsonArray[0].name"}</li>
+         <li>Diameter: ${"jsonArray[0].diameter"}</li>
+         <li>Star: ${"jsonArray[0].star"}</li>
+         <li>Distance from Earth: ${"jsonArray[0].distance"}</li>
+         <li>Number of Moons: ${"jsonArray[0].moons"}</li>
       </ol>
    <img src="${https://www.nasa.gov/sites/default/files/images/587837main_Kepler16_transit_art2_full.jpg}">
    */</img>
+  
       
       
    // "planetName" : "json[0].name",
@@ -52,7 +54,8 @@ window.addEventListener("load", function() {
    // "planetDistance" : "json[0].distance",
    // "planetImage" : "json[0].image",
    // "planetMoons" : "json[0].moons"
-   });
+   
+});
  });
 
  
@@ -60,15 +63,3 @@ window.addEventListener("load", function() {
    });
  });
 
-
-/* This block of code shows how to format the HTML once you fetch some planetary JSON!
-<h2>Mission Destination</h2>
-<ol>
-   <li>Name: ${}</li>
-   <li>Diameter: ${}</li>
-   <li>Star: ${}</li>
-   <li>Distance from Earth: ${}</li>
-   <li>Number of Moons: ${}</li>
-</ol>
-<img src="${}">
-*/
