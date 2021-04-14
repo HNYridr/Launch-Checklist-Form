@@ -27,7 +27,7 @@ window.addEventListener("load", function() {
          showFault.style.visibility =  "visible";
          fuelStatusChange = "there is not enough fuel for the journey";
          launchStatusChange = "Shuttle not ready for launch";
-         launchStatusChange.style.color = red;
+         document.getElementById("launchStatus").style.color = 'red';
       }
       
       fetch("https://handlers.education.launchcode.org/static/planets.json").then(function(response) {
