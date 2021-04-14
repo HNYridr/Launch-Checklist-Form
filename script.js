@@ -26,7 +26,7 @@ window.addEventListener("load", function() {
          
          showFault.style.visibility =  "visible";
          fuelStatusChange = "there is not enough fuel for the journey";
-         launchStatusChange = "Shuttle not ready for launch";
+         document.getElementById("fuelStatus").innerHTML("Shuttle not ready for launch");
          document.getElementById("launchStatus").style.color = 'red';
       }
       
