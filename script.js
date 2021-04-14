@@ -22,7 +22,7 @@ window.addEventListener("load", function() {
          alert("name of pilot/copilot cannot inculde numbers");
       }
       //update launch status if fuel level is incorrect 
-      if (fuelLelevInput.value < 10000){
+      if (fuelLevelInput.value < 10000){
          showFault.style.visibility =  "visible";
          fuelStatusChange = "there is not enough fuel for the journey";
          launchStatusChange = "Shuttle not ready for launch";
