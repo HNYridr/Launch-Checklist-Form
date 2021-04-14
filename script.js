@@ -11,15 +11,15 @@ window.addEventListener("load", function() {
       let launchStatusChange = document.getElementById("launchStatus");
       //alert user if required fields are not filled
       if (pilotNameInput.value === "" || copilotNameInput.value === "" || fuelLevelInput.value === "" || cargoMassInput.value === ""){
-         alert("All fields are required!")
+         alert("All fields are required!");
       }
       //alert user if incorrect data is used for cargo mass 
       if (isNaN(fuelLevelInput.value) || isNaN(cargoMassInput.value)){
-         alert("Fuel level and Cargo Mass MUST be numbers. do not include spaces or '.'")
+         alert("Fuel level and Cargo Mass MUST be numbers. do not include spaces or '.'");
       }
       //alert user if text only section contains other characters
-      if (pilotNameInput.value !== string || cargoMassInput.value !== string){
-         alert("name of pilot/copilot cannot inculde numbers")
+      if (pilotNameInput.value !== string || cargoMassInput.value !== string ){
+         alert("name of pilot/copilot cannot inculde numbers");
       }
       //update launch status if fuel level is incorrect 
       if (fuelLelevInput.value < 10000){
@@ -31,6 +31,7 @@ window.addEventListener("load", function() {
       
       fetch("https://handlers.education.launchcode.org/static/planets.json").then(function(response) {
    response.json().then( function(json) {
+      alert(json);
      emptyArray = [];
       jsonArray = emptyArray.push(json);
       const displayData = document.getElementById("missionTarget");
