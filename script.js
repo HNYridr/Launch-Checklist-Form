@@ -2,10 +2,10 @@ window.addEventListener("load", function() {
    let form = document.querySelector("form");
    form.addEventListner("submit", function(event) {
       event.preventDefault();
-      let pilotNameInput = document.getElementById("pilotName");
-      let copilotNameInput = document.getElementById("copilotName");
-      let fuelLevelInput = document.getElementById("fuelLevel");
-      let cargoMassInput = document.getElementById("cargoMass");
+      let pilotNameInput = document.querySelector("input[name=pilotName]");
+      let copilotNameInput = document.querySelector("input[name=copilotName]");
+      let fuelLevelInput = document.querySelector("input[name=fuelLevel]");
+      let cargoMassInput = document.querySelector("input[name=cargoMass]");
       let showFault = document.getElementById("faultyItems");
       let fuelStatusChange = document.getElementById("fuelStatus");
       let launchStatusChange = document.getElementById("launchStatus");
