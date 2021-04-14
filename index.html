@@ -10,11 +10,11 @@
         <div id="missionTarget">
               <h2>Mission Destination</h2>
                     <ol>
-                        <li>Name: ${script.json.planetName}</li>
-                        <li>Diameter: ${script.json.planetDiameter}</li>
-                        <li>Star: ${script.json.planetStar}</li>
-                        <li>Distance from Earth: ${script.json.planetDistance}</li>
-                        <li>Number of Moons: ${script.json.planetMoons}</li>
+                        <li>Name: ${script.json[0].planetName}</li>
+                        <li>Diameter: ${script.json[0].planetDiameter}</li>
+                        <li>Star: ${script.json[0].planetStar}</li>
+                        <li>Distance from Earth: ${script.json[0].planetDistance}</li>
+                        <li>Number of Moons: ${script.json[0].planetMoons}</li>
                     </ol>
                 <img src="${script.planetData.planetImage}">
                 */
