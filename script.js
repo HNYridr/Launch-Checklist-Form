@@ -1,7 +1,6 @@
 window.addEventListener("load", function() {
    let form = document.querySelector("form");
    form.addEventListner("submit", function(event) {
-      submit.preventDefault()
       let pilotNameInput = document.getElementById("pilotName");
       let copilotNameInput = document.getElementById("copilotName");
       let fuelLevelInput = document.getElementById("fuelLevel");
@@ -40,7 +39,7 @@ window.addEventListener("load", function() {
    });
  });
 
-
+ event.preventDefault()
       
    });
  });
