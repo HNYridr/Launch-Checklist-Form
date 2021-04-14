@@ -7,8 +7,7 @@ window.addEventListener("load", function() {
       let fuelLevelInput = document.querySelector("input[name=fuelLevel]");
       let cargoMassInput = document.querySelector("input[name=cargoMass]");
       let showFault = document.getElementById("faultyItems");
-      let fuelStatusChange = document.getElementById("fuelStatus");
-      let launchStatusChange = document.getElementById("launchStatus");
+      
       //alert user if required fields are not filled
       if (pilotNameInput.value === "" || copilotNameInput.value === "" || fuelLevelInput.value === "" || cargoMassInput.value === ""){
          alert("All fields are required!");
@@ -23,6 +22,8 @@ window.addEventListener("load", function() {
       }
       //update launch status if fuel level is incorrect 
       if (fuelLevelInput.value < 10000){
+         let fuelStatusChange = document.getElementById("fuelStatus");
+         let launchStatusChange = document.getElementById("launchStatus");
          showFault.style.visibility =  "visible";
          fuelStatusChange = "there is not enough fuel for the journey";
          launchStatusChange = "Shuttle not ready for launch";
