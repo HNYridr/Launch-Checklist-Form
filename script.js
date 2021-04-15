@@ -26,7 +26,13 @@ window.addEventListener("load", function() {
          
          showFault.style.visibility =  "visible";
          fuelStatus.innerHTML = "there is not enough fuel for the journey";
-         cargoStatus.innerHTML = "Shuttle not ready for launch";
+         
+         launchStatus.innerHTML = "Shuttle not ready for launch";
+         document.getElementById("launchStatus").style.color = 'red';
+      }
+      if (cargoMassInput.value > 10000){
+         showFault.style.visibility =  "visible";
+         cargoStatus.innerHTML = "cargo mass must be less than 10000";
          launchStatus.innerHTML = "Shuttle not ready for launch";
          document.getElementById("launchStatus").style.color = 'red';
       }
