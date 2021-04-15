@@ -44,7 +44,7 @@ window.addEventListener("load", function() {
    //    jsonArray = emptyArray.push(json);
    //    alert(jsonArray.value);
       const displayData = document.getElementById("missionTarget");
-      displayData.innerHTML = 
+      displayData.innerHTML += 
       
       <h2>Mission Destination</h2> 
         <ol>
