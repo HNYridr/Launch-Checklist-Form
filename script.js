@@ -7,6 +7,7 @@ window.addEventListener("load", function() {
       let fuelLevelInput = document.querySelector("input[name=fuelLevel]");
       let cargoMassInput = document.querySelector("input[name=cargoMass]");
       let showFault = document.getElementById("faultyItems");
+      let moonNums = document.getElementById('moonNum');
       
       //alert user if required fields are not filled
       if (pilotNameInput.value === "" || copilotNameInput.value === "" || fuelLevelInput.value === "" || cargoMassInput.value === ""){
@@ -37,7 +38,7 @@ window.addEventListener("load", function() {
       jsonArray = emptyArray.push(json);
       alert(jsonArray.value);
       const displayData = document.getElementById("missionTarget");
-      moonNum.innerHTML = "Number of Moons: ${"jsonArray[0].moons"}";
+      moonNums.innerHTML = "Number of Moons: ${"jsonArray[0].moons"}";
      
   
       
