@@ -34,10 +34,23 @@ window.addEventListener("load", function() {
       fetch("https://handlers.education.launchcode.org/static/planets.json").then(function(response) {
    response.json().then( function(json) {
       // alert(JSON.stringify(json));
-     emptyArray = [];
-      jsonArray = emptyArray.push(json);
-      alert(jsonArray.value);
+   //   emptyArray = [];
+   //    jsonArray = emptyArray.push(json);
+   //    alert(jsonArray.value);
       const displayData = document.getElementById("missionTarget");
+      displayData.innerHTML = 
+      
+      <h2>Mission Destination</h2> 
+        <ol>
+            <li id="planetName">Name: ${json[0].name}</li>
+            <li id="diameterVal">Diameter: ${json[0].diameter}</li>
+            <li id="stars">Star: ${json[0].star}</li>
+            <li id="DistanceFrom">Distance from Earth: ${json[0].distance}</li>
+            <li id="MoonNum">"Number of Moons: ${json[0].moons}"</li>
+      </ol>
+      
+   <img src="${https://www.nasa.gov/sites/default/files/images/587837main_Kepler16_transit_art2_full.jpg}">
+   */</img>
       
      
   
