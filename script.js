@@ -41,7 +41,7 @@ window.addEventListener("load", function() {
 
 
       const displayData = document.getElementById("missionTarget");
-      displayData.innerText = `
+      displayData.innerHTML = `
       <h2>Mission Destination</h2> 
         <ol>
             <li id="planetName">Name: ${JSON[0].name}</li>
