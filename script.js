@@ -45,7 +45,7 @@ window.addEventListener("load", function() {
       
       <h2>Mission Destination</h2> 
         <ol>
-            <li id="planetName">Name: ${json[0].name}</li>
+            <li id="planetName">Name: ${JSON[0].name}</li>
             <li id="diameterVal">Diameter: ${json[0].diameter}</li>
             <li id="stars">Star: ${json[0].star}</li>
             <li id="DistanceFrom">Distance from Earth: ${json[0].distance}</li>
@@ -56,19 +56,8 @@ window.addEventListener("load", function() {
 
    `;
    
-      
-      
-     
-  
-      
-      
-   
-   
-});
- });
-
- 
-      
+     });
    });
- });
+  });
+});
 
