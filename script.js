@@ -35,7 +35,7 @@ window.addEventListener("load", function() {
       // alert(JSON.stringify(json));
      emptyArray = [];
       jsonArray = emptyArray.push(json);
-      alert(jsonArray);
+      alert(jsonArray.value);
       const displayData = document.getElementById("missionTarget");
       moonNum.innerHTML = `Number of Moons: ${"jsonArray[0].moons"}`;
      
