@@ -32,10 +32,12 @@ window.addEventListener("load", function() {
       
       fetch("https://handlers.education.launchcode.org/static/planets.json").then(function(response) {
    response.json().then( function(json) {
-      alert(JSON.stringify(json));
+      // alert(JSON.stringify(json));
      emptyArray = [];
       jsonArray = emptyArray.push(json);
+      alert(jsonArray);
       const displayData = document.getElementById("missionTarget");
+      moonNum.innerHTML = `Number of Moons: ${"jsonArray[0].moons"}`;
      
   
       
