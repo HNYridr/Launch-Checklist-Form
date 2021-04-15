@@ -37,12 +37,11 @@ window.addEventListener("load", function() {
       
       fetch("https://handlers.education.launchcode.org/static/planets.json").then(function(response) {
    response.json().then( function(json) {
-      // alert(JSON.stringify(json));
-   //   emptyArray = [];
-   //    jsonArray = emptyArray.push(json);
-   //    alert(jsonArray.value);
+      
+
+
       const displayData = document.getElementById("missionTarget");
-      displayData.innerHTML += 
+      displayData.innerHTML = `
       
       <h2>Mission Destination</h2> 
         <ol>
@@ -54,6 +53,8 @@ window.addEventListener("load", function() {
       </ol>
       
    <img src="${json[0].image}"></img>
+
+   `;
    
       
       
@@ -61,12 +62,7 @@ window.addEventListener("load", function() {
   
       
       
-   // "planetName" : "json[0].name",
-   // "planetDiameter" : "json[0].diameter",
-   // "planetStar" : "json[0].star",
-   // "planetDistance" : "json[0].distance",
-   // "planetImage" : "json[0].image",
-   // "planetMoons" : "json[0].moons"
+   
    
 });
  });
