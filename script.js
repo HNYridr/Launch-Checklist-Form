@@ -44,11 +44,11 @@ window.addEventListener("load", function() {
       displayData.innerHTML = `
       <h2>Mission Destination</h2> 
         <ol>
-            <li id="planetName">Name: ${JSON[0].name}</li>
-            <li id="diameterVal">Diameter: ${JSON[0].diameter}</li>
-            <li id="stars">Star: ${JSON[0].star}</li>
-            <li id="DistanceFrom">Distance from Earth: ${JSON[0].distance}</li>
-            <li id="MoonNum">"Number of Moons: ${JSON[0].moons}"</li>
+            <li id="planetName">Name: ${json.json[0].name}</li>
+            <li id="diameterVal">Diameter: ${json.json[0].diameter}</li>
+            <li id="stars">Star: ${json.json[0].star}</li>
+            <li id="DistanceFrom">Distance from Earth: ${json.json[0].distance}</li>
+            <li id="MoonNum">"Number of Moons: ${json.json[0].moons}"</li>
       </ol>
       
    <img src="${JSON[0].image}"></img>
