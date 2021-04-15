@@ -23,10 +23,8 @@ window.addEventListener("load", function() {
       }
       //update launch status if fuel level is incorrect 
       if (fuelLevelInput.value < 10000){
-         
          showFault.style.visibility =  "visible";
          fuelStatus.innerHTML = "there is not enough fuel for the journey";
-         
          launchStatus.innerHTML = "Shuttle not ready for launch";
          document.getElementById("launchStatus").style.color = 'red';
       }
@@ -55,8 +53,9 @@ window.addEventListener("load", function() {
             <li id="MoonNum">"Number of Moons: ${json[0].moons}"</li>
       </ol>
       
-   <img src="${https://www.nasa.gov/sites/default/files/images/587837main_Kepler16_transit_art2_full.jpg}">
-   */</img>
+   <img src="${json[0].image}"></img>
+   
+      
       
      
   
