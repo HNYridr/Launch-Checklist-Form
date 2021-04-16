@@ -57,6 +57,10 @@ window.addEventListener("load", function() {
          launchStatus.innerHTML = "Shuttle not ready for launch";
          document.getElementById("launchStatus").style.color = 'red';
       }
+      else {
+         launchStatus.innerHTML = "Shuttle ready for launch!!!";
+         document.getElementById("launchStatus").style.color = 'green';
+      }
 
       });
    });
