@@ -60,22 +60,7 @@ window.addEventListener("load", function() {
          document.getElementById("launchStatus").style.color = 'red';
       }
 
-         
-      
-     
+      });
    });
-});
-
-
-const displayFault = document.getElementById("faultyItems");
-displayFault.innerHTML = `
-<ol>
-<li id="pilotStatus">`${pilotNameInput.value} Ready`</li>
-<li id="copilotStatus">`${copilotNameInput.value} Ready`</li>
-<li id="fuelStatus">Fuel level high enough for launch</li>
-<li id="cargoStatus">Cargo mass low enough for launch</li>
-</ol>
-
-`;
 });
 
