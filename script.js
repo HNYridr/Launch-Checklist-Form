@@ -22,7 +22,7 @@ window.addEventListener("load", function() {
       `;
 
       
-        });
+});
 
    form.addEventListener("submit", function(event) {
       event.preventDefault();
@@ -32,7 +32,16 @@ window.addEventListener("load", function() {
       let cargoMassInput = document.querySelector("input[name=cargoMass]");
       let showFault = document.getElementById("faultyItems");
 
-     
+
+      const displayFault = document.getElementById("launchStatusCheck");
+      displayFault.innerHTML = `
+      <ol>
+         <li id="pilotStatus">`${pilotNameInput.value} Ready`</li>
+         <li id="copilotStatus">`${copilotNameInput.value} Ready`</li>
+         <li id="fuelStatus">Fuel level high enough for launch</li>
+         <li id="cargoStatus">Cargo mass low enough for launch</li>
+      </ol>
+      `;
       
       //alert user if required fields are not filled
       if (pilotNameInput.value === "" || copilotNameInput.value === "" || fuelLevelInput.value === "" || cargoMassInput.value === ""){
